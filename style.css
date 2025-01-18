@@ -1,0 +1,211 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; 
+}
+.top-bar {
+    width: 100%;
+    background-color: rgb(54, 54, 175);
+    color: white;
+    text-align: center;
+}
+.higlight {
+    color: white;
+}
+.logo {
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.aInicio {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+.aFin {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    gap: 10px;
+}
+.logo img {
+    max-width: 250px; 
+    width: 100%;
+    cursor: pointer;
+}
+.links {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: center;   
+}
+.links :hover {
+    text-decoration: underline;
+}
+.links ul {
+    list-style: none;
+    display: flex; 
+    padding: 15px; 
+    margin: 0px;
+    gap: 20px;  
+}
+.links ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;   
+}
+aside ul{
+    display: flex;
+    list-style: none;
+}
+/* Hasta aquí el header */
+main {
+    padding-left: 20%;
+    padding-right: 20%;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+main section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    background-color: #ffffff; 
+    box-sizing: border-box;
+}
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+.filtro p {
+    color: rgb(121, 50, 201);
+}
+.filtro img {
+    align-items: center;
+    padding-top: 10px;   
+}
+.orden {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;  
+    gap: 10px; 
+    color: grey;
+}
+#orden {
+    color: grey;
+    margin-top: 5px;
+    height: 50px;
+    width: 250px;
+    padding-left: 10px;
+    font-size: 1rem; 
+    border: none;
+}
+.orden p {
+    padding: 10px;
+}
+/* Aquí empiezan las tarjetas de los cuadros */
+.cuadros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 150px;
+}
+.cuadros img {
+    height: 200px;
+    cursor: pointer;
+    width: 130px;
+}
+.cuadros img:hover {
+    height: 200px;
+    transform: scale(1.1);
+}
+.cuadros > div {
+    width: 150px;
+}
+.cuadros h3 {
+    color: rgb(121, 50, 201);
+    border: solid 2px rgb(121, 50, 201);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* aqui empieza el footer */
+.suscribete {
+    background-color: rgb(22, 22, 22);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.suscribete > h3 {
+    margin: 0px;
+    font-size: 2rem;
+}
+#email {
+    height: 20px;
+}
+@media (max-width: 1000px) {
+    .opciones {
+        display: none;
+    }
+    .cuadros {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+}
+@media (max-width: 610px) {
+    .links {
+        display: none;
+    }
+    main {
+        padding: 0px;
+        margin: 0px;
+        gap: 0px;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .cuadros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+        padding: 0px;
+        margin: 0px;
+        min-width: 320px;
+        padding: 40px;
+    }
+    .logo {
+        display: none;
+    }
+    .tituloCuadros {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

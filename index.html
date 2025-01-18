@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <section class="top-bar">
+            <p>Paga 2 y llévate <a href="#" class="higlight">3 cuadros</a>! ✨</p>
+        </section>
+        <section class="logo">
+          <a href="#" class="aInicio" aria-label="Buscar"><img src="/fotos/lupa.png" alt="Buscar"></a>
+          <img src="/fotos/logo.avif" alt="Tcustompc Logo" class="main-logo">
+          <div class="aFin">
+            <a href="#" aria-label="Cuenta de usuario"><img src="/fotos/personal.png" alt="Usuario"></a>
+            <a href="#" aria-label="Carrito de compras"><img src="/fotos/carrito.png" alt="Carrito"></a>
+          </div>
+        </section>
+        <nav class="links">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Cuadros</a></li>
+              <li><a href="#">TC-Lamps</a></li>
+              <li><a href="#">Soportes de Móvil</a></li>
+              <li><a href="#">Tarjetas de Regalo</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+      <h2 class="tituloCuadros">Cuadros Anime</h2>
+      <section class="opciones">
+        <div class="filtro">
+          <a href="#" aria-label="icono filtrar"><img src="/fotos/filtrar.png" alt ="icono de filtrar"></a>
+          <p>Filtrar</p>
+        </div>
+        <div class="orden">
+          <label for="orden">Ordenar por:</label>
+          <select id="orden" name="filtro">
+            <option value="mas-vendidos">Más vendidos</option>
+            <option value="precio-mayor-menor">Precio: Mayor a menor</option>
+            <option value="precio-menor-mayor">Precio: Menor a mayor</option>
+            <option value="fecha-publicacion">Fecha de publicación</option>
+          </select>
+          <p>2588 productos</p>
+        </div>  
+      </section>
+      <section class="cuadros">
+        
+      </section>
+    </main>
+    <footer>
+      <aside class="suscribete">
+        <h3>SUSCRÍBETE</h3>
+        <P>Susbríbete y no te pierdas nada. Nuevos diseños, promociones y sorpresas.</P>
+        <form action="/submit-email" method="POST">
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+          <button type="submit">Enviar</button>
+      </form>
+      </aside>
+
+    </footer>
+    
+</body>
+</html>
