@@ -70,7 +70,7 @@ selectOrden.addEventListener("change", (event) => {
     cuadrosSection.innerHTML = "" //limpiar cuadros antes de mostrar
 
     let cuadrosOrdenados //creamos una variable para los cuadros ordenados, orden cambiado del original
-    const criterio = event.target.value //esto que es?
+    const criterio = event.target.value //nos centramos en el valor del tarjet, que esta en el html
 
     if (criterio ==="mas-vendidos") {
         cuadrosOrdenados = [...cuadros].sort((a,b) => b.ventas - a.ventas)
@@ -79,13 +79,13 @@ selectOrden.addEventListener("change", (event) => {
     } else if (criterio ==="precio-menor-mayor") {
         cuadrosOrdenados = [...cuadros].sort((a,b) => a.precio - b.precio)
     } else if (criterio ==="fecha-publicacion") {
-        cuadrosOrdenados = [...cuadros].sort((a,b) => new Date(b.fecha) - new Date (a.fecha)) //este hay que cambiarlo seguramente
+        cuadrosOrdenados = [...cuadros].sort((a,b) => new Date(b.fecha) - new Date (a.fecha)) //tengo que poner new Date para convertir el numero a fecha
     } else {
         cuadrosOrdenados = cuadros
     }
 
     
-    //mostrar cuadros ordenados
+    //mostrar cuadros ordenados, esta parte muestra los cuadros una vez ordenados
     for (const cuadro of cuadrosOrdenados) {
         const elementImg = document.createElement("img");
         elementImg.src = cuadro.img;
