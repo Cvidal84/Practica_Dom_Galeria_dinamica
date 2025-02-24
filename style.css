@@ -122,18 +122,25 @@ main section {
 }
 /* Aquí empiezan las tarjetas de los cuadros */
 .cuadros {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     justify-content: center;
+    text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
     gap: 150px;
 }
 .cuadros img {
-    height: 200px;
+    height: 300px;
     cursor: pointer;
-    width: 130px;
+    width: 210px;
+}
+.cuadros > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .cuadros img:hover {
     height: 200px;
